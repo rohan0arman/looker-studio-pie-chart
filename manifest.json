@@ -1,0 +1,81 @@
+{
+  "name": "CustomPieChart",
+  "description": "A custom pie chart that shows labels, values, and percentages together.",
+  "data": {
+    "required": true,
+    "types": ["CATEGORICAL_DIMENSION", "METRIC"]
+  },
+  "style": {
+    "pieSliceTextColor": {
+      "type": "string",
+      "defaultValue": "#000000",
+      "description": "Color of the pie slice text."
+    },
+    "pieSliceTextStyle": {
+      "type": "object",
+      "properties": {
+        "fontName": {
+          "type": "string",
+          "defaultValue": "Arial",
+          "description": "Font of the pie slice text."
+        },
+        "fontSize": {
+          "type": "number",
+          "defaultValue": 12,
+          "description": "Font size of the pie slice text."
+        }
+      }
+    },
+    "sliceOffsets": {
+      "type": "array",
+      "defaultValue": [0.1, 0.1, 0.1, 0.1],
+      "description": "Offsets for the pie slices."
+    }
+  },
+  "resources": {
+    "scripts": [
+      "https://www.gstatic.com/charts/loader.js",
+      "https://your-hosted-url.com/custom-pie-chart.js"
+    ],
+    "css": []
+  },
+  "defaultData": {
+    "dimensions": [
+      {
+        "id": "label",
+        "name": "Label"
+      }
+    ],
+    "metrics": [
+      {
+        "id": "value",
+        "name": "Value"
+      }
+    ],
+    "defaultValues": [
+      {
+        "label": "Category A",
+        "value": 100
+      },
+      {
+        "label": "Category B",
+        "value": 200
+      },
+      {
+        "label": "Category C",
+        "value": 300
+      },
+      {
+        "label": "Category D",
+        "value": 400
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Your Name",
+      "email": "your.email@example.com"
+    }
+  ],
+  "version": "1.0.0"
+}
